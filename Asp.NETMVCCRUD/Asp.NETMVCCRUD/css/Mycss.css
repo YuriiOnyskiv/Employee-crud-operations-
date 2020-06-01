@@ -1,0 +1,16 @@
+﻿body {
+    background: url(../images/Myimg.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: aliceblue; 
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+     color: black;
+}
+

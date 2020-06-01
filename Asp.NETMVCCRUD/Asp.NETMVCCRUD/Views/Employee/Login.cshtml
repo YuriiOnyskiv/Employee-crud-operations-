@@ -1,0 +1,78 @@
+﻿@model Asp.NETMVCCRUD.Models.Admin
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    
+    <link rel="stylesheet" href="~/css/font-awesome.css"> 
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" media="all" /> 
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700" rel="stylesheet">
+ 
+</head>
+<body>
+  
+    <div class="header-w3l">
+        <h1>Login Form</h1>
+    </div>
+    
+    <div class="main-w3layouts-agileinfo">
+        <div class="wthree-form">
+            <h2>Fill out the form below to login</h2>
+            <form action="Login" method="post">
+                <div class="form-sub-w3">
+                    <input type="text" name="AdminName" placeholder="AdminName " required="" />
+                    <div class="icon-w3">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-sub-w3">
+                    <input type="password" name="AdminPassword" placeholder="AdminPassword" required="" />
+                    <div class="icon-w3">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div>
+                    @if (TempData["Message"] != null)
+                    {
+                        <span style="color:red;">@TempData["Message"].ToString()</span>
+                    }
+                </div>
+                <label class="anim">
+                    <input type="checkbox" class="checkbox">
+                    <span>Remember Me</span>
+
+                </label>
+                <div class="clear"></div>
+                <div class="submit-agileits">
+                    <input type="submit" value="Login">
+                </div>
+
+            </form>
+
+        </div>
+        
+
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2020 Login Form. All rights reserved.</p>
+    </div>
+    
+</body>
+</html>
